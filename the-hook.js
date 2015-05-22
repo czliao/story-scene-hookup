@@ -16,7 +16,7 @@ $(document).ready(function() {
     var pMode = false;
 
     $(document).on("keydown", function (e) {
-        console.log(e.which);
+        // console.log(e.which);
         switch(e.which) {
         case 80: //'p'
             if (!pMode) {
@@ -28,6 +28,9 @@ $(document).ready(function() {
                 $('.linkSocialContainer').show();
                 $('iframe').contents().find('#slideDeckContainer').show();
                 $('iframe').contents().find('.mapControlsContainer').show();
+
+                $('#floatingPanel .backdrop').fadeTo(100, 0.8);
+                $('#floatingPanel .navDotsInner').fadeTo(100, 0.8);
                 pMode = false;
             }
             break;
@@ -37,13 +40,17 @@ $(document).ready(function() {
     });
 
     $('#floatingPanel').mouseenter( function() {
-        $('#floatingPanel .backdrop').fadeTo(500, 0.8);
-        $('#floatingPanel .navDotsInner').fadeTo(500, 0.8);
+        if (pMode) {
+            $('#floatingPanel .backdrop').fadeTo(100, 0.8);
+            $('#floatingPanel .navDotsInner').fadeTo(100, 0.8);
+        }
     });
 
     $('#floatingPanel').mouseleave( function() {
-        $('#floatingPanel .backdrop').fadeTo(500, 0);
-        $('#floatingPanel .navDotsInner').fadeTo(500, 0);
+        if (pMode) {
+            $('#floatingPanel .backdrop').fadeTo(100, 0);
+            $('#floatingPanel .navDotsInner').fadeTo(100, 0);
+        }
     });
 
 });
