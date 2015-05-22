@@ -41,15 +41,15 @@ $(document).ready(function() {
 
     $('#floatingPanel').mouseenter( function() {
         if (pMode) {
-            $('#floatingPanel .backdrop').fadeTo(100, 0.8);
-            $('#floatingPanel .navDotsInner').fadeTo(100, 0.8);
+            $('#floatingPanel .backdrop').fadeTo(200, 0.8);
+            $('#floatingPanel .navDotsInner').fadeTo(200, 0.8);
         }
     });
 
     $('#floatingPanel').mouseleave( function() {
         if (pMode) {
-            $('#floatingPanel .backdrop').fadeTo(100, 0);
-            $('#floatingPanel .navDotsInner').fadeTo(100, 0);
+            $('#floatingPanel .backdrop').fadeTo(200, 0);
+            $('#floatingPanel .navDotsInner').fadeTo(200, 0);
         }
     });
 
