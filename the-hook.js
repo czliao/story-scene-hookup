@@ -15,8 +15,9 @@ $(document).ready(function() {
 
     var pMode = false;
 
-    window.addEventListener('keydown', function(k) {
-        switch(k.keyCode) {
+    $(document).on("keypress", function (e) {
+        console.log(e.which);
+        switch(e.which) {
         case 'p':
             if (!pMode) {
                 $('.linkSocialContainer').hide();
