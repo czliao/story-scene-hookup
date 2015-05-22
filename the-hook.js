@@ -15,10 +15,9 @@ $(document).ready(function() {
 
     var pMode = false;
 
-    $(document).on("keypress", function (e) {
-        console.log(e.which);
+    $(document).on("keydown", function (e) {
         switch(e.which) {
-        case 'p':
+        case 112: //'p'
             if (!pMode) {
                 $('.linkSocialContainer').hide();
                 $('iframe').contents().find('#slideDeckContainer').hide();
@@ -39,6 +38,9 @@ $(document).ready(function() {
 
 
 // NOTES //
+
+// Add this to somewhere (e.g. the default segment) of the story map (in the code view):
+// <script type="text/javascript" src="http://rawgit.com/czliao/story-scene-hookup/master/the-hook.js"></script>
 
 // Add this to each segment in the story map to hook to a particular bookmark in the scene.
 // <span class="slide-hook" data-slide="2"></span>
