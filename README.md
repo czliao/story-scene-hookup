@@ -1,5 +1,5 @@
 # story-scene-hookup
-Hooking up Slides in a Scene to a Story map Section
+For Esri ArcGIS Online Platform: Hooking up *slides* in a Scene to a Story Map *section*
 
 ## Hooking up Scene & Story Map
 1. In your story map journal, for the Main Stage, choose 'Web page' under CONTENT
@@ -34,11 +34,11 @@ Done.
 
 ## Extra Features
 
-To further simplify the UI for presentation purposes: Try pressing *p*
+To further simplify the UI for presentation purposes: Try pressing **p**
 
 - the social icons and (possibly) edit button will be hidden;
 - the horizontal slide deck as well as the zoom controls in the scene that shows up when your cursor goes into the scene area: gone.
 - if your cursor leaves the 'story' pane, the dark backdrop as well as the 'dots navigation' will fade out for better map view. I left the texts visible because I like the graphical quality of the texts over the map, but that requires some artistic fiddling with the content pane. (feedback on how to improve welcome.)
 
-Press *p* again to toggle back to normal mode.
+Press **p** again to toggle back to normal mode.
 <link rel="stylesheet" href="http://rawgit.com/czliao/story-scene-hookup/master/JL.css" />
