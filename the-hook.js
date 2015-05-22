@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('.swiper-slide').bind('DOMSubtreeModified', function(e) { // Track segment changes
+    $('.swiper-slide').bind('DOMSubtreeModified', function() { // Track segment changes
         setTimeout(triggerHook, 50);
     });
 
@@ -16,15 +16,18 @@ $(document).ready(function() {
     var pMode = false;
 
     $(document).on("keydown", function (e) {
+        console.log(e.which);
         switch(e.which) {
-        case 112: //'p'
+        case 80: //'p'
             if (!pMode) {
                 $('.linkSocialContainer').hide();
                 $('iframe').contents().find('#slideDeckContainer').hide();
+                $('iframe').contents().find('.mapControlsContainer').hide();
                 pMode = true;
             } else {
                 $('.linkSocialContainer').show();
                 $('iframe').contents().find('#slideDeckContainer').show();
+                $('iframe').contents().find('.mapControlsContainer').show();
                 pMode = false;
             }
             break;
@@ -32,6 +35,17 @@ $(document).ready(function() {
             break;
         }
     });
+
+    $('#floatingPanel').mouseenter( function() {
+        $('#floatingPanel .backdrop').fadeTo(500, 0.8);
+        $('#floatingPanel .navDotsInner').fadeTo(500, 0.8);
+    });
+
+    $('#floatingPanel').mouseleave( function() {
+        $('#floatingPanel .backdrop').fadeTo(500, 0);
+        $('#floatingPanel .navDotsInner').fadeTo(500, 0);
+    });
+
 });
 
 

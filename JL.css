@@ -1,0 +1,8 @@
+#floatingPanel {
+	width: 50% !important;
+	right: 0 !important;
+}
+
+.sectionPanel .separator {
+	border: 0px !important;
+}
