@@ -7,7 +7,9 @@ $(document).ready(function() {
         var hook = $('.swiper-slide-active .slide-hook'); // Find custom hook in segment content, see notes at end.
         if (hook) {
             var slide_num = $(hook).attr('data-slide');
-            $('iframe').contents().find('*[nr="'+ slide_num +'"] .slideButton').click(); // Trigger the jump by faking a click on the hidden slide button.
+            if (slide_num) {
+                $('iframe').contents().find('*[nr="'+ slide_num +'"] .slideButton').click(); // Trigger the jump by faking a click on the hidden slide button.
+            }
         }
     }
 
