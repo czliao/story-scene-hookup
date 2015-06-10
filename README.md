@@ -20,12 +20,14 @@ Every slide in a scene has a 'nr' number assigned to it, it starts from 0 as the
 In order to hook a story map section to a slide you need to know the slide's `nr` number. With that number (in this case let's say it's **1**), all you have to do is go to the section you'd like to hook up in the story map editing mode. Fire up the editing window by clicking on the pencil icon to the right of each section. In the EDIT SECTION window, choose to use source-code view (second icon from the right) for the 'Floating Panel' content.
 
 There add in this line of code into the text window:
+##### add this line of code into each storymap section, changing only the data-slide value
 
 ```
 <span class="slide-hook" data-slide="1"></span>
 ```
 
 Finally, add in a custom javascript file to make the magic happen. Using the same method to access the source code view of the default section (just my preference, should work anywhere in the page), add in this line of code:
+##### add this line of code only once in the whole storymap
 ```
 <script type="text/javascript" src="https://rawgit.com/czliao/story-scene-hookup/master/min/the-hook-min.js"></script>
 ```
@@ -42,3 +44,8 @@ To further simplify the UI for presentation purposes: Try pressing **p**
 
 Press **p** again to toggle back to normal mode.
 <link rel="stylesheet" href="http://rawgit.com/czliao/story-scene-hookup/master/JL.css" />
+
+## Known Issues
+- This script only works with the floating-pane mode but not the side-pane mode right now
+- The webscene slides should not invoke basemap changes as that is unsstable.
+- One has to add the 'hook' span tag to each section that uses the webscene even though you don't want to invoke a change, otherwise it would go back to the home state.
