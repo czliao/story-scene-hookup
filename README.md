@@ -43,7 +43,9 @@ To further simplify the UI for presentation purposes: Try pressing **p**
 - if your cursor leaves the 'story' pane, the dark backdrop as well as the 'dots navigation' will fade out for better map view. I left the texts visible because I like the graphical quality of the texts over the map, but that requires some artistic fiddling with the content pane. (feedback on how to improve welcome.)
 
 Press **p** again to toggle back to normal mode.
+```
 <link rel="stylesheet" href="http://rawgit.com/czliao/story-scene-hookup/master/JL.css" />
+```
 
 ## Known Issues
 - This script only works with the floating-pane mode but not the side-pane mode right now
